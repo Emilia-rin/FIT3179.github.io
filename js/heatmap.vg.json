@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/Emilia-rin/3179/main/Week9_homework/data/world-happiness-report-2015-2022-cleaned.csv"},
+  "width": 700,
+  "height": 200,
+  "mark": "rect",
+  "params": [
+    {
+      "name": "region",
+      "value": "Western Europe",
+      "bind": {
+        "input": "select",
+        "options":[
+          "Western Europe",
+          "Australia and New Zealand",
+          "North America",
+          "Middle East and Northern Africa",
+          "Latin America and Caribbean",
+          "Central and Eastern Europe",
+          "Eastern Asia",
+          "Southeastern Asia",
+          "Southern Asia",
+          "Sub-Saharan Africa"
+        ],
+        "name": "Region Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Region == region"}
+  ],
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal"},
+    "y": {"field": "Year", "type": "ordinal"},
+    "color":{"field": "Economy", "aggregate": "max", "type": "quantitative"},
+    "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Year", "type": "ordinal"},
+          {"field": "Economy", "type": "quantitative", "format": ".2f"},
+          {"field": "HappinessScore", "type": "quantitative", "title": "Happiness Score", "format": ".2f"}
+        ]
+  },
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent"}
+  },
+  "config": {"background": "#fff8d996"}
+}

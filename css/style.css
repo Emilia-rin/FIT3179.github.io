@@ -1,0 +1,80 @@
+body *{
+    font-family: Arial;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+body {
+    background-color: #fff8d996;
+}
+
+.vis-container {
+    width: 700,;
+    margin: 0px 180px;
+}
+
+h2,h1 {
+    margin-top: 0px;
+    font-weight: bold;
+    color: #324776;
+    text-align: center;
+}
+
+.description {
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.pure-g {
+    margin-bottom: 20px;
+}
+
+.pure-u-1-1 {
+    text-align: center;
+    margin: 0px 180px;
+}
+
+.figure {
+    text-align: right;
+}
+
+.small-font {
+    font-size: 14px;
+}
+
+.browncolor {
+    color: brown;
+}
+
+.graycolor {
+    color: gray;
+}
+
+.green {
+    color: aquamarine;
+}
+
+.lightgreen {
+    color: yellowgreen;
+}
+
+.yellow {
+    color: gold;
+}
+
+.red {
+    color: red;
+}
+
+.pink {
+    color: palevioletred;
+}
+
+.purple {
+    color: purple;
+}

@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>World Happiness Report</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+
+</head>
+
+<body>
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1><b>World Happiness Report</b></h1>
+        <p>This visualisation is about the state of happiness of people all over the world from 2015 till 2021.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+
+      <div class="pure-u-1-2">
+        <div id="vis1" class="vis-container"></div>
+        <p class="figure">Figure 1</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description">
+          <h2>Total Score of <span class="green">Economy</span>, <span class="red">Family</span>, <span class="purple">Health</span>, <span class="pink">Freedom</span>, <span class="lightgreen">Trust</span> and <span class="yellow">Generosity</span></h2>
+        </div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+      <!-- pure grid group -->
+      <div class="pure-g">
+
+         <div class="pure-u-1-2">
+           <div id="vis4" class="vis-container"></div>
+           <p class="figure">Figure 2</p>
+         </div>
+       </div>
+       <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description">
+            <h2>Happiness Score and Economy of different Regions</h2>
+            <p>From the distribution of the points on the scatter plot, it is easily shown that the 
+            <span class="browncolor">Sub-Saharan Africa</span> is more likely has lower economy score which results lower happiness score. 
+              On the other hand, the countries of <span class="graycolor">Western Europe</span> is more likely to have higher happiness score 
+              with high economy score.
+            </p>
+          </div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+     <!-- pure grid group -->
+     <div class="pure-g">
+
+      <div class="pure-u-1-2">
+        <div id="vis3" class="vis-container"></div>
+        <p class="figure">Figure 3</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description">
+          <h2>Economy of Countries</h2>
+          <p>The heatmap shows the Economy of the countries of different regions. 
+            Compare the happiness score with the color of economy shown on the heatmap, most countries with 
+          higher happiness score also has high economy score.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+
+      <div class="pure-u-1-2">
+        <div id="vis2" class="vis-container"></div>
+        <p class="figure">Figure 4</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description">
+          <h2>Happiness Ranking</h2>
+        </div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+      <!-- pure grid group -->
+      <div class="pure-g">
+
+         <div class="pure-u-1-2">
+           <div id="vis5" class="vis-container"></div>
+           <p class="figure">Figure 5</p>
+         </div>
+       </div>
+       <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p>Created by: Jiahui Yin.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+  <script type="text/javascript">
+    var specVis1 = "js/map.vg.json";
+    var specVis2 = "js/heatmap.vg.json";
+    var specVis3 = "js/scatterPlot.vg.json";
+    var specVis4 = "js/stackedBar.vg.json";
+    var specVis5 = "js/rank.vg.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {}).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {}).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {}).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {}).catch(console.error);
+  </script>
+</body>
+
+</html>
